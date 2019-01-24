@@ -36,7 +36,7 @@ brew install rbenv
 brew install terraform
 brew install ripgrep
 brew install vim
-brew install php56
+brew install php@7.2
 brew install zsh
 brew install zsh-completions
 brew install zsh-syntax-highlighting
