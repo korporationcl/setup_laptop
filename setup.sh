@@ -1,0 +1,60 @@
+# Setup New Laptop
+# ----------------------------------
+# There are a few things that I always need to setup every time I update my laptop
+# so I better automate part of this process to make the transition quick.
+# based on https://gist.github.com/bradp/bea76b16d3325f5c47d4
+
+
+echo "Installing xcode utils"
+xcode-select install
+
+# Check for Homebrew,
+# Install if we don't have it
+if test ! $(which brew); then
+  echo "Installing homebrew..."
+  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+fi
+
+# Update homebrew recipes
+echo "Updating homebrew..."
+brew update
+
+echo "Installing Git..."
+brew install git
+
+echo "Installing other brew stuff..."
+brew install awscli
+brew install tree
+brew install wget
+brew install cheat
+brew install cli53
+brew install htop
+brew install tcptraceroute
+brew install netcat
+brew install mtr
+brew install rbenv
+brew install terraform
+brew install ripgrep
+brew install vim
+brew install php56
+brew install zsh
+brew install zsh-completions
+brew install zsh-syntax-highlighting
+
+echo "Cleaning up brew"
+brew cleanup
+
+echo "Installing homebrew cask"
+brew install caskroom/cask/brew-cask
+
+echo "Installing Iterm2"
+brew cask install iterm2
+
+echo "Installing arcanist"
+mkdir ~/arcanist
+git clone https://github.com/phacility/libphutil.git ~/arcanist/libphutil
+
+# why not?
+killall Finder
+
+echo "Completed."
