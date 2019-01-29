@@ -44,11 +44,30 @@ brew install zsh-syntax-highlighting
 echo "Cleaning up brew"
 brew cleanup
 
+echo "Install Authy"
+brew cask install authy
+
 echo "Installing homebrew cask"
 brew install caskroom/cask/brew-cask
 
 echo "Installing Iterm2"
 brew cask install iterm2
+
+echo "Installing Alfred"
+brew cask install alfred
+
+
+echo "Installing 1password"
+brew cask install 1password
+
+echo "Installing GPG Tools"
+brew cask install gpg-suite
+
+echo "Installing Docker"
+brew cask install docker
+
+echo "Installing the-unarchiver"
+brew cask install the-unarchiver
 
 echo "Installing arcanist"
 mkdir ~/arcanist
