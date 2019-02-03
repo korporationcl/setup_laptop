@@ -38,11 +38,18 @@ brew install ripgrep
 brew install vim
 brew install php@7.2
 brew install zsh
+brew install jq
 brew install zsh-completions
 brew install zsh-syntax-highlighting
 
 echo "Cleaning up brew"
 brew cleanup
+
+echo "Install VirtualBox"
+brew cask install virtualbox
+
+echo "Installing Vagrant"
+brew cask install vagrant
 
 echo "Install Authy"
 brew cask install authy
@@ -72,6 +79,9 @@ brew cask install the-unarchiver
 echo "Installing arcanist"
 mkdir ~/arcanist
 git clone https://github.com/phacility/libphutil.git ~/arcanist/libphutil
+
+echo "AWS shell for bash/zsh"
+git clone https://github.com/bash-my-universe/bash-my-aws.git ~/.bash-my-aws
 
 # why not?
 killall Finder
